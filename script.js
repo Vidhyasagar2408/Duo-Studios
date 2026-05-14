@@ -54,6 +54,7 @@ function page1Animation() {
     gsap.to(cursor, {
       width: 120,
       height: 60,
+      padding: "10px 20px",
       borderRadius: "20px",
       duration: 0.3,
     });
@@ -64,6 +65,7 @@ function page1Animation() {
     gsap.to(cursor, {
       width: 60,
       height: 60,
+      padding: "0px",
       borderRadius: "50%",
       duration: 0.3,
     });
