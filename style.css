@@ -18,20 +18,20 @@ body {
 }
 
 .cursor {
-  height: 35px;
-  width: 35px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   position: fixed;
   background-color: #edbefe;
-  z-index: 9;
+  z-index: 8;
   mix-blend-mode: difference;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  left: 0;
-  top: 0;
+  left: 1.7%;
+  top: 3.09%;
   transform: translate(-50%, -50%);
 }
 
@@ -50,6 +50,8 @@ body {
 .page1 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  z-index: 9;
 }
 
 .nav {
@@ -69,17 +71,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .nav .nav-part2 h4 {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
+  position: relative;
+  width: fit-content;
 }
 
-.nav .nav-part2 h4:nth-child(1) {
-  border-bottom: 1px solid white;
+.nav .nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: all ease 0.3s;
+}
+
+.nav .nav-part2 h4:hover::after {
+  width: 100%;
 }
 
 .nav .nav-part3 .circle {
@@ -90,6 +105,7 @@ body {
 }
 
 .page1 h1 {
+  width: fit-content;
   font-size: 7vw;
   font-weight: 100;
   margin-top: 10vw;
@@ -97,6 +113,7 @@ body {
 }
 
 .page1 h2 {
+  width: fit-content;
   font-size: 7vw;
   font-weight: 100;
   margin-left: 20vw;
@@ -117,6 +134,8 @@ body {
   margin-top: 10vh;
   padding: 5vw;
   border-bottom: 2px solid #111;
+  position: relative;
+  z-index: 9;
 }
 
 .page2 h1 {
@@ -170,6 +189,8 @@ body {
   width: 100%;
   padding: 5vw;
   border-bottom: 2px solid #111;
+  position: relative;
+  z-index: 9;
 }
 
 .page3 h1 {
@@ -210,21 +231,96 @@ body {
   text-transform: uppercase;
 }
 
-.page3-part2 .circle{
-    height: 200px;
-    width: 200px;
-    background-color: #edbefe;
-    border-radius: 50%;
-    color: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
+.page3-part2 .circle {
+  height: 200px;
+  width: 200px;
+  background-color: #edbefe;
+  border-radius: 50%;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .page4 {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding: 5vw;
+  border-bottom: 2px solid #fff;
+}
+
+.elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+  padding: 20px 40px;
+}
+
+.elem h1 {
+  font-size: 5vw;
+  transition: all ease-out 0.5s;
+}
+
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #edbefe;
+}
+
+.elem img {
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  transform: translateY(20%) rotate(2deg);
+  z-index: 10;
+}
+
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+#first {
+  left: 10%;
+}
+
+#second {
+  right: 10%;
+}
+
+#third {
+  left: 5%;
+}
+
+#fourth {
+  right: 5%;
+}
+
+#fifth {
+  left: 0%;
+}
+
+#sixth {
+  right: 0%;
+}
+
+.text-div {
+  height: 11vh;
+  overflow: hidden;
+}
+
+.page5 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  z-index: 9;
+  padding: 5vw;
+  border-bottom: 2px solid #111;
 }

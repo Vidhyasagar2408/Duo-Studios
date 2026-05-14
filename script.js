@@ -39,22 +39,54 @@ function page1Animation() {
   let cursor = document.querySelector(".cursor");
   let main = document.querySelector(".main");
   let video = document.querySelector(".page1 video");
+  let h1 = document.querySelector(".page1 h1");
+  let h2 = document.querySelector(".page1 h2");
   main.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
       left: dets.x + "px",
       top: dets.y + "px",
-      duration: 0.6,
+      duration: 0.7,
     });
   });
 
   video.addEventListener("mouseenter", function () {
     cursor.classList.add("active");
     cursor.innerHTML = "SOUND ON";
+    cursor.style.whiteSpace = "nowrap";
+    cursor.style.padding = "10px";
   });
 
   video.addEventListener("mouseleave", function () {
     cursor.classList.remove("active");
     cursor.innerHTML = "";
+  });
+
+  h1.addEventListener("mouseenter", function () {
+    gsap.to(cursor, {
+      height: 200,
+      width: 200,
+    });
+  });
+
+  h1.addEventListener("mouseleave", function () {
+    gsap.to(cursor, {
+      height: 60,
+      width: 60,
+    });
+  });
+
+  h2.addEventListener("mouseenter", function () {
+    gsap.to(cursor, {
+      height: 200,
+      width: 200,
+    });
+  });
+
+  h2.addEventListener("mouseleave", function () {
+    gsap.to(cursor, {
+      height: 60,
+      width: 60,
+    });
   });
 
   let tl = gsap.timeline({
@@ -97,7 +129,6 @@ function page1Animation() {
     scrollTrigger: {
       trigger: ".page1 h1",
       scroller: ".main",
-      markers: true,
       start: "top -60%",
       end: "top -100%",
       scrub: 2,
@@ -171,7 +202,6 @@ function page2Animation() {
 page2Animation();
 
 function page3Animation() {
-  _;
   let page3 = document.querySelector(".page3-part2");
 
   gsap.from(page3, {
@@ -189,3 +219,17 @@ function page3Animation() {
 }
 
 page3Animation();
+
+let tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page1 h1",
+    scroller: ".main",
+    start: "top -350%",
+    end: "top -360%",
+    scrub: 3,
+  },
+});
+
+tl3.to(".main", {
+  backgroundColor: "#0f0d0d",
+});
