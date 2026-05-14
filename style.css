@@ -33,6 +33,9 @@ body {
   left: 1.7%;
   top: 3.09%;
   transform: translate(-50%, -50%);
+  transition: background-image ease 0.5s;
+  background-position: center;
+  background-size: cover;
 }
 
 .cursor.active {
@@ -61,6 +64,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 40px 20px;
+  position: fixed;
+  z-index: 10;
+  mix-blend-mode: difference;
 }
 
 .nav img {
@@ -302,17 +308,17 @@ body {
 }
 
 #fourth {
-    top: 50%;
+  top: 50%;
   right: 5%;
 }
 
 #fifth {
-    top: -30%;
+  top: -30%;
   left: 0%;
 }
 
 #sixth {
-    top: -200%;
+  top: -200%;
   right: 0%;
 }
 
@@ -328,4 +334,49 @@ body {
   z-index: 9;
   padding: 5vw;
   border-bottom: 2px solid #111;
+}
+
+.page5 .title {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+}
+
+.page5 h2 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.page5 h6 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.page5 .box {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.box h3 {
+  font-size: 30px;
+  font-weight: 300;
+  opacity: 0.4;
+}
+
+.page5 .box-right {
+  display: flex;
+  gap: 200px;
+}
+
+.box-right h5 {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.4;
 }

@@ -41,11 +41,11 @@ function page1Animation() {
   let video = document.querySelector(".page1 video");
   let h1 = document.querySelector(".page1 h1");
   let h2 = document.querySelector(".page1 h2");
-  main.addEventListener("mousemove", function (dets) {
+  window.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
       left: dets.x + "px",
       top: dets.y + "px",
-      duration: 0.7,
+      duration: 0.5,
     });
   });
 
@@ -220,16 +220,43 @@ function page3Animation() {
 
 page3Animation();
 
-let tl3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".page1 h1",
-    scroller: ".main",
-    start: "top -350%",
-    end: "top -360%",
-    scrub: 3,
-  },
-});
+function page4Animation() {
+  let tl3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page1 h1",
+      scroller: ".main",
+      start: "top -350%",
+      end: "top -360%",
+      scrub: 3,
+    },
+  });
 
-tl3.to(".main", {
-  backgroundColor: "#0f0d0d",
-});
+  tl3.to(".main", {
+    backgroundColor: "#0f0d0d",
+  });
+}
+
+page4Animation();
+
+function page5Animation() {
+  let boxes = document.querySelectorAll(".box");
+  let cursor = document.querySelector(".cursor");
+  boxes.forEach(function (elem) {
+    elem.addEventListener("mouseenter", function () {
+      let att = elem.getAttribute("data-image");
+      cursor.style.height = "300px";
+      cursor.style.width = "250px";
+      cursor.style.borderRadius = "0";
+      cursor.style.backgroundImage = `url(${att})`;
+    });
+
+    elem.addEventListener("mouseleave", function () {
+      cursor.style.height = "60px";
+      cursor.style.width = "60px";
+      cursor.style.borderRadius = "50%";
+      cursor.style.backgroundImage = `none`;
+    });
+  });
+}
+
+page5Animation();
