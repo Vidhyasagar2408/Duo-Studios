@@ -38,13 +38,6 @@ body {
   background-size: cover;
 }
 
-.cursor.active {
-  height: 60px;
-  width: 120px;
-  border-radius: 20px;
-  color: black;
-}
-
 .main {
   background-color: #0f0d0d;
   overflow: hidden;

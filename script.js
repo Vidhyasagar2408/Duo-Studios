@@ -50,15 +50,23 @@ function page1Animation() {
   });
 
   video.addEventListener("mouseenter", function () {
-    cursor.classList.add("active");
     cursor.innerHTML = "SOUND ON";
-    cursor.style.whiteSpace = "nowrap";
-    cursor.style.padding = "10px";
+    gsap.to(cursor, {
+      width: 120,
+      height: 60,
+      borderRadius: "20px",
+      duration: 0.3,
+    });
   });
 
   video.addEventListener("mouseleave", function () {
-    cursor.classList.remove("active");
     cursor.innerHTML = "";
+    gsap.to(cursor, {
+      width: 60,
+      height: 60,
+      borderRadius: "50%",
+      duration: 0.3,
+    });
   });
 
   h1.addEventListener("mouseenter", function () {
@@ -261,53 +269,57 @@ function page5Animation() {
 
 page5Animation();
 
-let work = document.querySelector("#work");
-let studio = document.querySelector("#studio");
-let contact = document.querySelector("#contact");
-let purple1 = document.querySelector(".purple1");
-let purple2 = document.querySelector(".purple2");
-let purple3 = document.querySelector(".purple3");
+function navAnimation() {
+  let work = document.querySelector("#work");
+  let studio = document.querySelector("#studio");
+  let contact = document.querySelector("#contact");
+  let purple1 = document.querySelector(".purple1");
+  let purple2 = document.querySelector(".purple2");
+  let purple3 = document.querySelector(".purple3");
 
-work.addEventListener("mouseenter", function () {
-  purple1.style.opacity = 1;
-});
+  work.addEventListener("mouseenter", function () {
+    purple1.style.opacity = 1;
+  });
 
-work.addEventListener("mouseleave", function () {
-  purple1.style.opacity = 0;
-});
+  work.addEventListener("mouseleave", function () {
+    purple1.style.opacity = 0;
+  });
 
-studio.addEventListener("mouseenter", function () {
-  purple2.style.opacity = 1;
-});
+  studio.addEventListener("mouseenter", function () {
+    purple2.style.opacity = 1;
+  });
 
-studio.addEventListener("mouseleave", function () {
-  purple2.style.opacity = 0;
-});
+  studio.addEventListener("mouseleave", function () {
+    purple2.style.opacity = 0;
+  });
 
-contact.addEventListener("mouseenter", function () {
-  purple3.style.opacity = 1;
-});
+  contact.addEventListener("mouseenter", function () {
+    purple3.style.opacity = 1;
+  });
 
-contact.addEventListener("mouseleave", function () {
-  purple3.style.opacity = 0;
-});
+  contact.addEventListener("mouseleave", function () {
+    purple3.style.opacity = 0;
+  });
 
-gsap.to(".marquee1", {
-  x: "-100%",
-  duration: 10,
-  repeat: -1,
-  ease: "none",
-});
+  gsap.to(".marquee1", {
+    x: "-100%",
+    duration: 10,
+    repeat: -1,
+    ease: "none",
+  });
 
-gsap.to(".marquee2", {
-  x: "-100%",
-  duration: 10,
-  repeat: -1,
-  ease: "none",
-});
-gsap.to(".marquee3", {
-  x: "-100%",
-  duration: 10,
-  repeat: -1,
-  ease: "none",
-});
+  gsap.to(".marquee2", {
+    x: "-100%",
+    duration: 10,
+    repeat: -1,
+    ease: "none",
+  });
+  gsap.to(".marquee3", {
+    x: "-100%",
+    duration: 10,
+    repeat: -1,
+    ease: "none",
+  });
+}
+
+navAnimation();
