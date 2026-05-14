@@ -29,6 +29,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  box-sizing: border-box;
   font-size: 12px;
   left: 1.7%;
   top: 3.09%;
@@ -36,6 +39,7 @@ body {
   transition: background-image ease 0.5s;
   background-position: center;
   background-size: cover;
+  white-space: nowrap;
 }
 
 .main {
