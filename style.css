@@ -33,8 +33,8 @@ body {
   line-height: 1.1;
   box-sizing: border-box;
   font-size: 12px;
-  left: 1.7%;
-  top: 3.09%;
+  left: 2.4%;
+  top: 5%;
   transform: translate(-50%, -50%);
   transition: background-image ease 0.5s;
   background-position: center;
@@ -308,6 +308,8 @@ body {
 }
 
 .elem img {
+  height: 300px;
+  width: 300px;
   position: absolute;
   opacity: 0;
   transition: all ease-out 0.5s;
@@ -332,22 +334,22 @@ body {
 
 #third {
   top: -150%;
-  left: 5%;
+  left: 10%;
 }
 
 #fourth {
   top: 50%;
-  right: 5%;
+  right: 10%;
 }
 
 #fifth {
   top: -30%;
-  left: 0%;
+  left: 10%;
 }
 
 #sixth {
   top: -200%;
-  right: 0%;
+  right: 10%;
 }
 
 .text-div {

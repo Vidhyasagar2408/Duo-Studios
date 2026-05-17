@@ -155,6 +155,7 @@ function page2Animation() {
   let h1 = document.querySelector(".page2 h1");
   let h2 = document.querySelector(".page2 h2");
   let p = document.querySelector(".page2 p");
+  let button = document.querySelector(".page2 button");
 
   let tl3 = gsap.timeline();
 
@@ -199,6 +200,22 @@ function page2Animation() {
         scroller: ".main",
         trigger: p,
         start: "top 40%",
+        end: "top 80%",
+        scrub: 3,
+      },
+    },
+    "page2",
+  );
+
+  tl3.from(
+    button,
+    {
+      y: 80,
+      opacity: 0,
+      scrollTrigger: {
+        scroller: ".main",
+        trigger: button,
+        start: "top 80%",
         end: "top 80%",
         scrub: 3,
       },
